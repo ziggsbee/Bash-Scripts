@@ -1,0 +1,10 @@
+#!/bin/bash
+cd ~/pintos/src/threads
+while true
+do
+	make clean
+	make check
+	now=$(date +"%T")
+	echo "Test Ran at: $now";
+	sleep 5m
+done
