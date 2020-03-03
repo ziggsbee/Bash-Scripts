@@ -1,10 +1,22 @@
 #!/bin/bash
+# Created by Nickalas Porsch
 #This file can be used with the Pintos Operating System to run tests while you are still coding and checking things.
 #To do this add this file to your ~/bin directory and add the bin directory to your .bash_profile $PATH variable.
 #Make sure to run bash before running checkPintos and also make sure to add the executable flag.
 #Also make sure to edit line 2 so it goes to the src/threads directory of pintos.
-# Created by Nickalas Porsch
-cd ~/pintos/src/threads
+#Make sure to change cis520 to the correct folder for your pintos operating system.
+if [[ $1 -eq "1" ]]
+then
+	cd ~/cis520/pintos/src/threads
+elif [[ $1 -eq "2" ]]
+then
+	cd ~/cis520/pintos/src/userprog
+else
+	echo "Invalid Argument";
+	exit 1
+fi
+
+
 while true
 do
 	make clean
