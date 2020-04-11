@@ -8,9 +8,12 @@
 if [[ $1 -eq "1" ]]
 then
 	cd ~/cis520/pintos/src/threads
-elif [[ $1 -eq "2" ] || [ $1 -eq "3" ]] # Projects 2 and 3 use the same test cases
+elif [ $1 -eq "3" ]] # Projects 2
 then
 	cd ~/cis520/pintos/src/userprog
+elif [[ $1 -eq "2" ] || [ $1 -eq "3" ]]
+then
+	cd ~/cis520/pintos/src/vm
 else
 	echo "Invalid Argument";
 	exit 1
