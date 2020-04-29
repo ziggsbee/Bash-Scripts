@@ -8,10 +8,7 @@
 if [[ $1 -eq "1" ]]
 then
 	cd ~/cis520/pintos/src/threads
-elif [ $1 -eq "3" ]] # Projects 2
-then
-	cd ~/cis520/pintos/src/userprog
-elif [[ $1 -eq "2" ] || [ $1 -eq "3" ]]
+elif [[ $1 -eq "2" ]
 then
 	cd ~/cis520/pintos/src/vm
 else
@@ -22,6 +19,14 @@ fi
 
 while true
 do
+	if [ $1 -eq "3" ]] # Project 3 has to check if userprog and vm directories are correct.
+	then
+		cd ~/cis520/pintos/src/userprog
+		make clean
+		make check
+		cd ~/cis520/pintos/src/vm
+	fi
+	
 	make clean
 	make check
 	now=$(date +"%T")
