@@ -1,7 +1,7 @@
 #!/bin/bash
-# Using evtx_dump.py this converts all evtx files to XML in a given directory.
-# Then sends the to an output directory.
-# evtx_dump.py can be found here: https://github.com/williballenthin/python-evtx
+# Using evtx_dump.py, this converts all evtx files to XML in a given directory.
+# Then sends the output to an output directory.
+# For more information about evtx_dump.py please look at williballenthin's github: https://github.com/williballenthin/python-evtx
 
 
 if [ -d "$1output" ]
